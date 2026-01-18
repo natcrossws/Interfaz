@@ -1,0 +1,349 @@
+:root {
+    --color-primary: #2575fc;
+    --color-secondary: #6a11cb;
+    --color-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --color-text-dark: #2c3e50;
+    --color-text-muted: #6c757d;
+    --color-text-light: #333;
+    --color-number-grey: #b0b3c2;
+    --color-tag-purple: rgb(122, 24, 241);
+}
+
+.logo_interfaz {
+    width: 90px;
+    margin-left: 30px;
+}
+
+body {
+    background: linear-gradient(120deg, #cdd3e6, #dedce0);
+    min-height: 200vh;
+}
+
+.navbar,
+.bg-light,
+.card-lomaspopular {
+    background: rgba(255, 255, 255, 0.518) !important;
+    backdrop-filter: blur(20px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.2) !important;
+    border-radius: 70px !important;
+    margin-top: 23px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.me-2 {
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-search-custom {
+    border: none !important;
+    background: var(--color-gradient);
+    color: white !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 10px;
+}
+
+
+
+
+.imagen_principal {
+    width: 100%;
+}
+
+.container-imagen {
+    margin-left: 85px;
+    margin-top: 65px;
+}
+
+.card-lomaspopular {
+    width: 281px;
+    margin-top: 65px;
+    margin-left: 90px;
+
+    border-radius: 30px !important;
+}
+
+.titulo_lomaspopular {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.custom-numbers-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: popular-counter;
+}
+
+.element-li-lomaspopular {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-text-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.element-li-lomaspopular:hover {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-primary);
+}
+
+.element-li-lomaspopular a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.element-li-lomaspopular:hover a {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-container {
+    padding: 40px 60px;
+}
+
+.element-li-lomaspopular::before {
+    counter-increment: popular-counter;
+    content: counter(popular-counter, decimal-leading-zero);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-number-grey);
+    margin-right: 15px;
+    line-height: 1;
+    font-family: 'Times New Roman', serif;
+    flex-shrink: 0;
+}
+
+.span_imagen_principal {
+    background-color: var(--color-tag-purple);
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+.parrafo_imagen_principal {
+    font-size: 22px;
+}
+
+.meta-datos-publicacion {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.meta-datos-publicacion i {
+    font-size: 1.1em;
+}
+
+.fecha-publicacion {
+    color: var(--color-text-muted);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.fecha-publicacion i {
+    margin-right: 8px;
+}
+
+/* Sección Últimas Publicaciones */
+.header-ultimas-publicaciones {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-ultimas-publicaciones h1 {
+    white-space: nowrap;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.header-ultimas-publicaciones::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.card-publicacion {
+    border: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+.card-publicacion img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-hover-wrapper {
+    border-radius: 12px;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-publicacion:hover .image-hover-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-publicacion .card-title {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-publicacion .card-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.card-publicacion:hover .card-text {
+    color: var(--color-primary);
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.row-cards-ultimas-publicaciones {
+    margin: 10px 10px 10px 10px;
+}
+
+/* Sección Artistas que crean con tecnología */
+.img-artist-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+}
+
+.card-artist .card-text {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.card-artist .card-title {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-artist {
+    padding: 15px 15px 15px 15px;
+}
+
+.social-icons-artist {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon-link {
+    color: var(--color-text-muted);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+}
+
+.social-icon-link i {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.social-icon-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+/* Ensure FontAwesome icons are visible */
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.header-banner-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
